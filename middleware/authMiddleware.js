@@ -10,7 +10,7 @@ const authMiddleware = (req, res, next) => {
   }
 
   if (authKey !== API_AUTH_KEY) {
-    return res.status(403).json({
+    return res.status(401).json({
       message: "Failed to authenticate apiauthkey"
     });
   }
